@@ -119,10 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {navLinks.map((item) => {
             const isActive =
               (item.page === currentPage && !item.hash) ||
-              (item.label === "Linux Services" && currentPage === "service-detail") ||
-              (item.page === "our-work" &&
-                currentPage === "case-study" &&
-                item.label === "Our Work");
+              (item.label === "Linux Services" && currentPage === "service-detail");
 
             if ("dropdown" in item && item.dropdown) {
               return (

@@ -2,8 +2,6 @@ import React, { useState, useEffect, useLayoutEffect } from "react";
 import { PageRoute } from "./types";
 import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
-import { CaseStudyDetail } from "./components/CaseStudyDetail";
-import { OurWorkPortfolio } from "./components/OurWorkPortfolio";
 import { Footer } from "./components/Footer";
 import { ConsultationModal } from "./components/ConsultationModal";
 import { AboutSection } from "./components/AboutSection";
@@ -22,8 +20,6 @@ export default function App() {
     const hash = window.location.hash.toLowerCase();
 
     if (hash.includes("#/services/")) return "service-detail";
-    if (hash.includes("#/case-study")) return "case-study";
-    if (hash.includes("#/our-work")) return "our-work";
     if (hash.includes("#/about")) return "about";
     if (hash.includes("#/contact")) return "contact";
     if (hash.includes("#/industries/")) return "industry-detail";
@@ -63,13 +59,6 @@ export default function App() {
   >(getInitialIndustrySlug());
   const [selectedBlogSlug, setSelectedBlogSlug] = useState<string | null>(getInitialBlogSlug());
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
-  const [selectedGoalFilter, setSelectedGoalFilter] =
-    useState<string>("All Goals");
-  const [selectedIndustryFilter, setSelectedIndustryFilter] =
-    useState<string>("All Industries");
-  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
-    "capernaum-erp",
-  );
 
   
   useEffect(() => {
@@ -150,14 +139,6 @@ export default function App() {
     scrollToTopInstantly();
   }, [currentPage, selectedServiceSlug, selectedIndustrySlug, selectedBlogSlug]);
 
-  const handleSelectGoal = (goalTitle: string) => {
-    setSelectedGoalFilter(goalTitle);
-  };
-
-  const handleSelectIndustry = (industryName: string) => {
-    setSelectedIndustryFilter(industryName);
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans selection:bg-lime-400 selection:text-slate-950">
       {/* Global Navigation Bar */}
@@ -174,13 +155,7 @@ export default function App() {
         {currentPage === "home" && (
           <>
             <HeroSection
-              onNavigate={(page) => {
-                if (page === "our-work") {
-                  setSelectedGoalFilter("All Goals");
-                  setSelectedIndustryFilter("All Industries");
-                }
-                handleNavigate(page);
-              }}
+              onNavigate={handleNavigate}
               onOpenContact={() => setIsConsultationOpen(true)}
               onServiceNavigate={handleServiceNavigate}
             />
@@ -200,26 +175,6 @@ export default function App() {
             key={selectedIndustrySlug}
             slug={selectedIndustrySlug}
             onOpenContact={() => setIsConsultationOpen(true)}
-          />
-        )}
-
-        {currentPage === "case-study" && (
-          <CaseStudyDetail
-            projectId={selectedProjectId}
-            onNavigate={handleNavigate}
-            onOpenContact={() => setIsConsultationOpen(true)}
-          />
-        )}
-
-        {currentPage === "our-work" && (
-          <OurWorkPortfolio
-            onNavigate={handleNavigate}
-            onOpenContact={() => setIsConsultationOpen(true)}
-            onSelectProject={(projectId) => {
-              setSelectedProjectId(projectId);
-            }}
-            selectedGoalFilter="All Goals"
-            selectedIndustryFilter="All Industries"
           />
         )}
 
