@@ -594,6 +594,17 @@ export const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({
   const selectedProject =
     PORTFOLIO_PROJECTS.find((project) => project.id === projectId) ??
     PORTFOLIO_PROJECTS[0];
+  if (!selectedProject) {
+    return (
+      <div className="flex min-h-[60vh] items-center justify-center bg-slate-50 px-4">
+        <div className="max-w-lg text-center">
+          <h1 className="text-2xl font-bold text-slate-900">Case studies coming soon</h1>
+          <p className="mt-3 text-slate-600">Gargi Linux project details will be added when approved for publication.</p>
+          <button onClick={() => onNavigate("our-work")} className="mt-6 rounded-lg bg-lime-400 px-5 py-3 font-semibold text-slate-950">Back to Our Work</button>
+        </div>
+      </div>
+    );
+  }
   const detail =
     PROJECT_DETAILS[selectedProject.id] ?? PROJECT_DETAILS["capernaum-erp"];
 

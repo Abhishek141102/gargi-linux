@@ -171,12 +171,11 @@ const [serviceFilter, setServiceFilter] = useState<string>("All Services");
             Our Work
           </h1>
           <p className="mt-3 text-lg text-slate-600 max-w-3xl">
-            Real stories. Real impact. See how we help businesses transform and
-            grow.
+            Gargi Linux project details will be shared here as verified case studies are approved.
           </p>
 
           {/* Filter Toolbar matching screenshot */}
-          <div className="mt-8 p-4 bg-white rounded-xl border border-slate-200 shadow-xs flex flex-wrap items-center gap-3">
+          <div className={PORTFOLIO_PROJECTS.length === 0 ? "hidden" : "mt-8 p-4 bg-white rounded-xl border border-slate-200 shadow-xs flex flex-wrap items-center gap-3"}>
             {/* Goal Filter */}
             <div className="flex-1 min-w-[170px]">
               <label className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1">
@@ -264,7 +263,7 @@ const [serviceFilter, setServiceFilter] = useState<string>("All Services");
         {filteredProjects.length === 0 ? (
           <div className="text-center py-20 bg-slate-50 rounded-2xl border border-slate-200">
             <p className="text-lg font-semibold text-slate-700">
-              No case studies match the selected filters.
+              No Gargi Linux case studies are published yet.
             </p>
             <button
               onClick={() => {
@@ -355,7 +354,7 @@ const [serviceFilter, setServiceFilter] = useState<string>("All Services");
         )}
       </motion.div>
 
-      {/* Testimonials Section (Dark Navy Background) */}
+      {TESTIMONIALS.length > 0 && (
       <motion.section
         id="testimonials-section"
         className="bg-[#0B0F19] text-white py-20 border-y border-slate-800"
@@ -367,7 +366,7 @@ const [serviceFilter, setServiceFilter] = useState<string>("All Services");
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              What Our Valued Clients Say About TechnoKraft
+              What Our Clients Say About Gargi Linux Access
             </h2>
             <p className="mt-3 text-base text-slate-400">
               Partnerships built on trust. Results that speak.
@@ -434,7 +433,7 @@ const [serviceFilter, setServiceFilter] = useState<string>("All Services");
             ))}
           </div>
         </div>
-      </motion.section>
+      </motion.section>)}
 
       {/* Bottom CTA Banner (White rounded container) */}
       <motion.section
@@ -448,11 +447,10 @@ const [serviceFilter, setServiceFilter] = useState<string>("All Services");
           <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center overflow-hidden">
             <div className="lg:col-span-7">
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Ready to Transform Your Business?
+                Need Linux infrastructure support?
               </h2>
               <p className="mt-3 text-base sm:text-lg text-slate-600">
-                Let&apos;s discuss how we can help you achieve your next
-                milestone.
+                Let&apos;s talk about Linux administration, security, and ongoing support.
               </p>
 
               <div className="mt-8 flex flex-wrap justify-center sm:justify-start gap-4">
@@ -485,7 +483,7 @@ const [serviceFilter, setServiceFilter] = useState<string>("All Services");
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
                     <span className="text-xs font-bold">
-                      TechnoKraft Platform
+                      Gargi Linux Access
                     </span>
                   </div>
                   <span className="text-[10px] text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800 font-medium">
