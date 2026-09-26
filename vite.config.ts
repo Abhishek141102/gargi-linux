@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/technokraft-responsive-fix/',
+    base: '/gargi-linux/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
