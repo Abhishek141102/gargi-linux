@@ -1,0 +1,6 @@
+{
+  "name": "TechnoKraft",
+  "description": "Enterprise technology consulting and digital transformation website showcasing business transformation frameworks, case studies, and industry solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
