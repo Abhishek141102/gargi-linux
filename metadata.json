@@ -1,6 +1,6 @@
 {
-  "name": "TechnoKraft",
-  "description": "Enterprise technology consulting and digital transformation website showcasing business transformation frameworks, case studies, and industry solutions.",
+  "name": "Gargi Linux Access",
+  "description": "Linux infrastructure, secure access, and technical support for business systems.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": ["Linux infrastructure and administration"]
 }

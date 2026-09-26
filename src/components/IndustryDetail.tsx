@@ -60,7 +60,7 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
               </p>
             )}
             <p className="text-sm font-semibold text-blue-400 mb-3">
-              TechnoKraft Services
+              Gargi Linux Access
             </p>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
               {industry.title}
