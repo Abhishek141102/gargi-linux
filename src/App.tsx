@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { PageRoute } from "./types";
 import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
@@ -13,6 +14,7 @@ import { TermsOfUse } from "./components/Terms&Conditions";
 import { Blogs } from "./components/Blogs";
 import { BlogDetail } from "./components/BlogDetails";
 import { Opportunities } from "./components/Opportunities";
+import { ScrollReveal } from "./components/ScrollReveal";
 
 export default function App() {
   
@@ -59,6 +61,8 @@ export default function App() {
   >(getInitialIndustrySlug());
   const [selectedBlogSlug, setSelectedBlogSlug] = useState<string | null>(getInitialBlogSlug());
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
+  const pageTransitionKey = [currentPage, selectedServiceSlug ?? "", selectedIndustrySlug ?? "", selectedBlogSlug ?? ""].join(":");
 
   
   useEffect(() => {
@@ -152,51 +156,63 @@ export default function App() {
 
       {/* Page Content */}
       <main className="flex-grow">
-        {currentPage === "home" && (
-          <>
-            <HeroSection
-              onNavigate={handleNavigate}
-              onOpenContact={() => setIsConsultationOpen(true)}
-              onServiceNavigate={handleServiceNavigate}
-            />
-          </>
-        )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={pageTransitionKey}
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.3, ease: "easeOut" }}
+          >
+            <ScrollReveal>
+            {currentPage === "home" && (
+              <>
+                <HeroSection
+                  onNavigate={handleNavigate}
+                  onOpenContact={() => setIsConsultationOpen(true)}
+                  onServiceNavigate={handleServiceNavigate}
+                />
+              </>
+            )}
 
-        {currentPage === "service-detail" && selectedServiceSlug && (
-          <ServiceDetail
-            key={selectedServiceSlug}
-            slug={selectedServiceSlug}
-            onOpenContact={() => setIsConsultationOpen(true)}
-          />
-        )}
+            {currentPage === "service-detail" && selectedServiceSlug && (
+              <ServiceDetail
+                key={selectedServiceSlug}
+                slug={selectedServiceSlug}
+                onOpenContact={() => setIsConsultationOpen(true)}
+              />
+            )}
 
-        {currentPage === "industry-detail" && selectedIndustrySlug && (
-          <IndustryDetail
-            key={selectedIndustrySlug}
-            slug={selectedIndustrySlug}
-            onOpenContact={() => setIsConsultationOpen(true)}
-          />
-        )}
+            {currentPage === "industry-detail" && selectedIndustrySlug && (
+              <IndustryDetail
+                key={selectedIndustrySlug}
+                slug={selectedIndustrySlug}
+                onOpenContact={() => setIsConsultationOpen(true)}
+              />
+            )}
 
-        {currentPage === "about" && (
-          <AboutSection onOpenContact={() => setIsConsultationOpen(true)} />
-        )}
+            {currentPage === "about" && (
+              <AboutSection onOpenContact={() => setIsConsultationOpen(true)} />
+            )}
 
-        {currentPage === "contact" && <ContactSection />}
+            {currentPage === "contact" && <ContactSection />}
 
-        {currentPage === "privacy-policy" && <PrivacyPolicy />}
+            {currentPage === "privacy-policy" && <PrivacyPolicy />}
 
-        {currentPage === "terms-&-conditions" && <TermsOfUse />}
+            {currentPage === "terms-&-conditions" && <TermsOfUse />}
 
-        {currentPage === "blogs" && <Blogs onNavigate={handleNavigate} onBlogNavigate={handleBlogNavigate} />}
+            {currentPage === "blogs" && <Blogs onNavigate={handleNavigate} onBlogNavigate={handleBlogNavigate} />}
 
-        {currentPage === "blog-detail" && (
-          <BlogDetail slug={selectedBlogSlug ?? ""} onNavigate={handleNavigate} onBlogNavigate={handleBlogNavigate} />
-        )}
+            {currentPage === "blog-detail" && (
+              <BlogDetail slug={selectedBlogSlug ?? ""} onNavigate={handleNavigate} onBlogNavigate={handleBlogNavigate} />
+            )}
 
-        {currentPage === "opportunities" && (
-          <Opportunities onNavigate={handleNavigate} />
-        )}
+            {currentPage === "opportunities" && (
+              <Opportunities onNavigate={handleNavigate} />
+            )}
+            </ScrollReveal>
+          </motion.div>
+        </AnimatePresence>
       </main>
 
       {/* Global Dark Theme Footer */}
