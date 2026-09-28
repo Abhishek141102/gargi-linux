@@ -26,7 +26,7 @@ export const PrivacyPolicy: React.FC = () => {
     <div className="bg-white">
       {/* Hero */}
       <motion.section
-        className="bg-[#292a2d] text-white py-16 sm:py-20 lg:py-24"
+        className="bg-[#13243a] text-white py-16 sm:py-20 lg:py-24"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -81,7 +81,7 @@ export const PrivacyPolicy: React.FC = () => {
                     key={item}
                     className="flex gap-3 text-sm sm:text-base text-slate-600 leading-7"
                   >
-                    <span className="text-lime-700 mt-1">•</span>
+                    <span className="text-blue-700 mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -153,7 +153,7 @@ export const PrivacyPolicy: React.FC = () => {
               If you have questions about this Privacy Policy, contact us at{" "}
               <a
                 href="mailto:contact@example.com"
-                className="text-lime-700 hover:text-lime-800 font-medium"
+                className="text-blue-700 hover:text-blue-800 font-medium"
               >
                 contact@example.com
               </a>

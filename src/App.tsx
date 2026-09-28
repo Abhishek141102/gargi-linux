@@ -140,7 +140,7 @@ export default function App() {
   }, [currentPage, selectedServiceSlug, selectedIndustrySlug, selectedBlogSlug]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans selection:bg-lime-400 selection:text-slate-950">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans selection:bg-blue-200 selection:text-slate-900">
       {/* Global Navigation Bar */}
       <Navbar
         currentPage={currentPage}

@@ -10,9 +10,9 @@ interface FooterProps {
 }
 
 const linkClass =
-  "block w-full text-left hover:text-lime-300 transition-colors cursor-pointer";
+  "block w-full text-left hover:text-blue-300 transition-colors cursor-pointer";
 const headingClass =
-  "text-xs font-bold uppercase tracking-wider text-lime-300 mb-3";
+  "text-xs font-bold uppercase tracking-wider text-blue-300 mb-3";
 
 export const Footer: React.FC<FooterProps> = ({
   onNavigate,
@@ -23,7 +23,7 @@ export const Footer: React.FC<FooterProps> = ({
     <footer
       id="global-footer"
       className="text-white border-t border-white/10"
-      style={{ backgroundColor: "#202124" }}
+      style={{ backgroundColor: "#10243a" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-x-8">
@@ -50,40 +50,21 @@ export const Footer: React.FC<FooterProps> = ({
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="w-8 h-8 rounded-md border border-lime-400/25 bg-lime-400/10 hover:bg-lime-400 text-lime-300 hover:text-slate-950 flex items-center justify-center transition-colors text-sm font-bold"
+                className="w-8 h-8 rounded-md border border-blue-400/25 bg-blue-400/10 hover:bg-blue-600 text-blue-300 hover:text-white flex items-center justify-center transition-colors text-sm font-bold"
               >
                 in
               </a>
               <a
                 href="#"
-                aria-label="Instagram"
-                className="w-8 h-8 rounded-md border border-lime-400/25 bg-lime-400/10 hover:bg-lime-400 text-lime-300 hover:text-slate-950 flex items-center justify-center transition-colors"
-              >
-                <svg
-                  className="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </a>
-              <a
-                href="#"
                 aria-label="Facebook"
-                className="w-8 h-8 rounded-md border border-lime-400/25 bg-lime-400/10 hover:bg-lime-400 text-lime-300 hover:text-slate-950 flex items-center justify-center transition-colors text-sm font-bold"
+                className="w-8 h-8 rounded-md border border-blue-400/25 bg-blue-400/10 hover:bg-blue-600 text-blue-300 hover:text-white flex items-center justify-center transition-colors text-sm font-bold"
               >
                 f
               </a>
               <a
                 href="#"
                 aria-label="WhatsApp"
-                className="w-8 h-8 rounded-md border border-lime-400/25 bg-lime-400/10 hover:bg-lime-400 text-lime-300 hover:text-slate-950 flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-md border border-blue-400/25 bg-blue-400/10 hover:bg-blue-600 text-blue-300 hover:text-white flex items-center justify-center transition-colors"
               >
                 <svg
                   className="w-4 h-4"
@@ -195,7 +176,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <p className="text-slate-300 font-semibold mb-1">Mobile</p>
                 <a
                   href="tel:+910000000000"
-                  className="hover:text-lime-300 transition-colors"
+                  className="hover:text-blue-300 transition-colors"
                 >
                   +91 00000 00000{" "}
                 </a>
@@ -204,7 +185,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <p className="text-slate-300 font-semibold mb-1">Email</p>
                 <a
                   href="mailto:contact@example.com"
-                  className="hover:text-lime-300 transition-colors break-words"
+                  className="hover:text-blue-300 transition-colors break-words"
                 >
                   contact@example.com{" "}
                 </a>
@@ -222,7 +203,7 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Bottom Copyright Strip */}
-        <div className="mt-8 border-t border-lime-400/20 pt-5 text-xs text-slate-400">
+        <div className="mt-8 border-t border-blue-400/20 pt-5 text-xs text-slate-400">
           <p>
             © {new Date().getFullYear()} Gargi Linux Access Pvt. Ltd. All rights
             reserved.

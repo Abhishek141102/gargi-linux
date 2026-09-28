@@ -26,7 +26,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   const update = (key: keyof typeof formData, value: string) =>
     setFormData((current) => ({ ...current, [key]: value }));
   const fieldClass =
-    "w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 outline-none focus:border-lime-600 focus:ring-2 focus:ring-lime-200";
+    "w-full rounded-lg border border-slate-300 bg-slate-50 px-3 py-2.5 text-sm text-slate-900 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200";
   const labelClass = "mb-1.5 block text-xs font-semibold text-slate-700";
 
   return (
@@ -45,9 +45,9 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
         transition={{ duration: 0.22, ease: "easeOut" }}
         className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl"
       >
-        <div className="flex items-center justify-between bg-[#292a2d] p-6 text-white">
+        <div className="flex items-center justify-between bg-[#13243a] p-6 text-white">
           <div className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-lime-400 text-[#242629]">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white">
               <Calendar className="h-4 w-4" />
             </div>
             <div>
@@ -70,7 +70,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
         <div className="p-6">
           {submitted ? (
             <div className="py-8 text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-lime-100 text-lime-700">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-blue-700">
                 <CheckCircle2 className="h-8 w-8" />
               </div>
               <h4 className="text-xl font-bold text-slate-900">
@@ -86,7 +86,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   setSubmitted(false);
                   onClose();
                 }}
-                className="mt-6 rounded-lg bg-lime-400 px-6 py-2.5 text-sm font-semibold text-[#242629] transition hover:bg-lime-300"
+                className="mt-6 rounded-lg bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700"
               >
                 Done
               </button>
@@ -174,7 +174,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
               </label>
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-lime-400 py-3 text-sm font-semibold text-[#242629] shadow-sm transition hover:bg-lime-300"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700"
               >
                 <Send className="h-4 w-4" />
                 <span>Send enquiry</span>

@@ -23,7 +23,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
       <div className="text-center">
         <h1 className="text-2xl font-bold text-slate-900">Article not found</h1>
         <p className="mt-3 text-slate-600">This article may have moved or the link may be incorrect.</p>
-        <button onClick={() => onNavigate("blogs")} className="mt-6 rounded-md bg-lime-400 px-5 py-3 font-semibold text-slate-950">Back to blogs</button>
+        <button onClick={() => onNavigate("blogs")} className="mt-6 rounded-md bg-blue-600 px-5 py-3 font-semibold text-white">Back to blogs</button>
       </div>
     </div>
   );
@@ -33,7 +33,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Hero / Cover */}
-      <section className="relative bg-[#292a2d] text-white overflow-hidden">
+      <section className="relative bg-[#13243a] text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={blog.image}
@@ -41,7 +41,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
             className="w-full h-full object-cover opacity-30"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-[#292a2d]/70 via-[#292a2d]/80 to-[#292a2d]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#13243a]/70 via-[#13243a]/80 to-[#13243a]" />
         </div>
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
@@ -63,7 +63,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
             transition={{ duration: 0.4 }}
             className="mx-auto mt-10 max-w-4xl text-center"
           >
-            <span className="inline-flex px-3 py-1.5 rounded-full bg-lime-400 text-slate-950 text-xs sm:text-sm font-semibold">
+            <span className="inline-flex px-3 py-1.5 rounded-full bg-blue-600 text-white text-xs sm:text-sm font-semibold">
               {blog.category}
             </span>
 
@@ -138,7 +138,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
             <div className="mt-12 pt-8 border-t border-slate-200">
               <button
                 onClick={() => onNavigate("blogs")}
-                className="inline-flex items-center gap-2 text-lime-700 hover:text-lime-800 font-semibold"
+                className="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-semibold"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Back to all blogs
@@ -192,7 +192,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
             </div>
 
             {/* Contact CTA */}
-            <div className="mt-6 rounded-2xl bg-[#292a2d] p-6 text-white">
+            <div className="mt-6 rounded-2xl bg-[#13243a] p-6 text-white">
               <h3 className="text-lg font-bold">
                 Need Linux support?
               </h3>
@@ -204,7 +204,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
 
               <button
                 onClick={() => onNavigate("contact")}
-                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-lime-300 hover:text-lime-200"
+                className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-300 hover:text-blue-200"
               >
                 Talk to Our Team
                 <ArrowRight className="w-4 h-4" />
@@ -219,7 +219,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
         <section className="bg-slate-50 border-t border-slate-200 py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <span className="text-sm font-semibold uppercase tracking-wider text-lime-700">
+              <span className="text-sm font-semibold uppercase tracking-wider text-blue-700">
                 Keep Reading
               </span>
 
@@ -246,15 +246,15 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
                   </div>
 
                   <div className="p-5">
-                    <span className="text-xs font-semibold text-lime-700">
+                    <span className="text-xs font-semibold text-blue-700">
                       {item.category}
                     </span>
 
-                    <h3 className="mt-2 text-lg font-bold leading-snug group-hover:text-lime-700 transition-colors">
+                    <h3 className="mt-2 text-lg font-bold leading-snug group-hover:text-blue-700 transition-colors">
                       {item.title}
                     </h3>
 
-                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-lime-700">
+                    <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
                       Read Article
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>

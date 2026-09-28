@@ -75,8 +75,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       id="main-navigation"
       className={`sticky top-0 z-50 transition-colors duration-200 ${
         isDark
-          ? "bg-[#292a2d] text-white border-b border-white/10 shadow-md"
-          : "bg-[#292a2d] text-white border-b border-white/10 shadow-xs"
+          ? "bg-[#13243a] text-white border-b border-white/10 shadow-md"
+          : "bg-[#13243a] text-white border-b border-white/10 shadow-xs"
       }`}
     >
       <motion.div
@@ -145,7 +145,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                           ? "text-white font-semibold"
                           : "text-slate-300 hover:text-white"
                         : isActive
-                          ? "text-lime-700 font-semibold"
+                          ? "text-blue-700 font-semibold"
                           : "text-slate-600 hover:text-slate-900"
                     }`}
                   >
@@ -158,7 +158,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       <div
                         className={`rounded-lg shadow-xl border overflow-hidden ${
                           isDark
-                            ? "bg-[#0B0F19] border-slate-800"
+                            ? "bg-[#10243a] border-slate-800"
                             : "bg-white border-slate-200"
                         }`}
                       >
@@ -223,7 +223,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       ? "text-white font-semibold"
                       : "text-slate-300 hover:text-white"
                     : isActive
-                      ? "text-lime-700 font-semibold"
+                      ? "text-blue-700 font-semibold"
                       : "text-slate-600 hover:text-slate-900"
                 }`}
               >
@@ -243,7 +243,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="px-5 py-2.5 rounded-md bg-lime-400 hover:bg-lime-300 text-[#242629] font-semibold text-sm transition-all shadow-sm active:scale-95 cursor-pointer flex items-center gap-1.5"
+            className="px-5 py-2.5 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-sm active:scale-95 cursor-pointer flex items-center gap-1.5"
           >
             <span>Get in touch</span>
             <ChevronRight className="w-4 h-4" />
@@ -283,7 +283,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             transition={{ duration: 0.3, ease: "easeOut" }}
             className={`lg:hidden px-4 pt-2 pb-6 border-b overflow-hidden ${
               isDark
-                ? "bg-[#0B0F19] border-slate-800 text-white"
+                ? "bg-[#10243a] border-slate-800 text-white"
                 : "bg-white border-slate-200 text-slate-900"
             }`}
           >
@@ -404,7 +404,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }}
                   whileTap={{ scale: 0.97 }}
                   whileHover={{ y: -2 }}
-                  className="w-full py-3 rounded-md bg-lime-400 text-[#242629] font-semibold text-center text-sm shadow-sm"
+                  className="w-full py-3 rounded-md bg-blue-600 text-white font-semibold text-center text-sm shadow-sm"
                 >
                   Get in touch
                 </motion.button>

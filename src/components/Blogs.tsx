@@ -15,7 +15,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Hero */}
-      <section className="bg-[#292a2d] text-white">
+      <section className="bg-[#13243a] text-white">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8 sm:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
             transition={{ duration: 0.5 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-lime-400/10 border border-lime-400/20 text-lime-300 text-sm font-medium">
+            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-400/10 border border-blue-400/20 text-blue-300 text-sm font-medium">
               Insights & Ideas
             </span>
 
@@ -43,7 +43,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <div>
-              <span className="text-sm font-semibold uppercase tracking-wider text-lime-700">
+              <span className="text-sm font-semibold uppercase tracking-wider text-blue-700">
                 Latest Insights
               </span>
 
@@ -70,7 +70,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
                 }}
                 whileHover={{ y: -5 }}
                 onClick={() => handleBlogClick(blog.slug)}
-                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-lime-300 transition-all duration-300 cursor-pointer"
+                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 cursor-pointer"
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden bg-slate-100">
@@ -108,7 +108,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-4 text-xl sm:text-2xl font-bold leading-snug text-slate-900 group-hover:text-lime-700 transition-colors">
+                  <h3 className="mt-4 text-xl sm:text-2xl font-bold leading-snug text-slate-900 group-hover:text-blue-700 transition-colors">
                     {blog.title}
                   </h3>
 
@@ -118,7 +118,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
                   </p>
 
                   {/* Read More */}
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-lime-700">
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
                     Read Article
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -132,7 +132,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
       {/* Bottom CTA */}
       <section className="pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-[#292a2d] px-6 py-10 sm:px-10 text-center text-white">
+          <div className="rounded-2xl bg-[#13243a] px-6 py-10 sm:px-10 text-center text-white">
             <h2 className="text-2xl sm:text-3xl font-bold">
               Have a Linux infrastructure question?
             </h2>
@@ -143,7 +143,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
 
             <button
               onClick={() => onNavigate("contact")}
-              className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-lime-400 hover:bg-lime-300 text-slate-950 font-semibold transition"
+              className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition"
             >
               Talk to Our Team
               <ArrowRight className="w-5 h-5" />

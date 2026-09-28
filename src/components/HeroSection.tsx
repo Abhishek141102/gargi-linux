@@ -33,12 +33,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   <>
     <section
       id="home-hero-section"
-      className="relative overflow-hidden bg-[#292a2d] text-white"
+      className="relative overflow-hidden bg-[#13243a] text-white"
     >
       <div className="absolute inset-0 opacity-25" aria-hidden="true">
-        <div className="absolute -right-20 -top-28 h-[34rem] w-[34rem] rounded-full border border-lime-400/40" />
-        <div className="absolute right-[-5rem] top-[-13rem] h-[34rem] w-[34rem] rounded-full border border-lime-400/30" />
-        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
+        <div className="absolute -right-20 -top-28 h-[34rem] w-[34rem] rounded-full border border-blue-400/40" />
+        <div className="absolute right-[-5rem] top-[-13rem] h-[34rem] w-[34rem] rounded-full border border-blue-400/30" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
       </div>
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-24 sm:px-6 sm:py-32 lg:grid-cols-[1.1fr_.9fr] lg:px-8">
         <motion.div
@@ -47,14 +47,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-lime-400/10 px-4 py-2 text-xs font-bold uppercase tracking-[.18em] text-lime-300">
-            <span className="h-2 w-2 rounded-full bg-lime-400" /> Linux &
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-xs font-bold uppercase tracking-[.18em] text-blue-300">
+            <span className="h-2 w-2 rounded-full bg-blue-600" /> Linux &
             infrastructure services
           </p>
           <h1 className="max-w-3xl text-4xl font-extrabold leading-[1.12] tracking-tight sm:text-6xl">
             Your Linux systems,
             <br />
-            <span className="text-lime-400">connected and secure.</span>
+            <span className="text-blue-300">connected and secure.</span>
           </h1>
           <p className="mt-6 max-w-xl text-base leading-7 text-slate-300 sm:text-lg">
             Gargi Linux Access helps businesses manage Linux environments with
@@ -64,21 +64,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <button
               onClick={onOpenContact}
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-lime-400 px-6 py-3.5 font-bold text-[#242629] transition hover:bg-lime-300"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-6 py-3.5 font-bold text-white transition hover:bg-blue-700"
             >
               Talk to our team <ArrowRight className="h-5 w-5" />
             </button>
             <button
               onClick={() => onNavigate("about")}
-              className="rounded-md border border-white/20 px-6 py-3.5 font-semibold text-white transition hover:border-lime-400 hover:text-lime-300"
+              className="rounded-md border border-white/20 px-6 py-3.5 font-semibold text-white transition hover:border-blue-400 hover:text-blue-300"
             >
               About Gargi Linux Access
             </button>
           </div>
         </motion.div>
-        <div className="relative mx-auto w-full max-w-md rounded-2xl border border-white/10 bg-[#202124]/90 p-6 shadow-2xl shadow-black/30 sm:p-8">
+        <div className="relative mx-auto w-full max-w-md rounded-2xl border border-white/10 bg-[#10243a]/90 p-6 shadow-2xl shadow-black/30 sm:p-8">
           <div className="mb-7 flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-lime-400" />
+            <span className="h-2.5 w-2.5 rounded-full bg-blue-600" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/25" />
             <span className="h-2.5 w-2.5 rounded-full bg-white/25" />
             <span className="ml-auto font-mono text-xs text-slate-500">
@@ -88,20 +88,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="space-y-4 font-mono text-sm">
             <p className="text-slate-500"># infrastructure, made dependable</p>
             <p>
-              <span className="text-lime-400">$</span>{" "}
+              <span className="text-blue-300">$</span>{" "}
               <span className="text-slate-200">systemctl status</span>{" "}
               <span className="text-white">your-services</span>
             </p>
-            <div className="rounded-lg border border-lime-400/20 bg-lime-400/5 p-4 text-lime-300">
-              <span className="mr-2 inline-block h-2 w-2 rounded-full bg-lime-400" />
+            <div className="rounded-lg border border-blue-400/20 bg-blue-400/5 p-4 text-blue-300">
+              <span className="mr-2 inline-block h-2 w-2 rounded-full bg-blue-600" />
               Systems ready. Access controlled.
             </div>
             <p className="text-slate-400">
-              <span className="text-lime-400">$</span> focus on your business
-              <span className="animate-pulse text-lime-400">_</span>
+              <span className="text-blue-300">$</span> focus on your business
+              <span className="animate-pulse text-blue-300">_</span>
             </p>
           </div>
-          <div className="absolute -bottom-4 -right-3 rounded-lg border border-white/10 bg-[#303135] px-4 py-3 text-xs text-slate-300 shadow-xl">
+          <div className="absolute -bottom-4 -right-3 rounded-lg border border-white/10 bg-[#1b3554] px-4 py-3 text-xs text-slate-300 shadow-xl">
             Built around Linux. Designed for confidence.
           </div>
         </div>
@@ -110,7 +110,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     <section id="services" className="bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[.16em] text-lime-700">
+          <p className="text-sm font-bold uppercase tracking-[.16em] text-blue-700">
             What we do
           </p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
@@ -126,16 +126,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <button
               key={service.slug}
               onClick={() => onServiceNavigate(service.slug)}
-              className="group rounded-xl border border-slate-200 bg-slate-50 p-6 text-center transition hover:-translate-y-1 hover:border-lime-400 hover:shadow-lg"
+              className="group rounded-xl border border-slate-200 bg-slate-50 p-6 text-center transition hover:-translate-y-1 hover:border-blue-400 hover:shadow-lg"
             >
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-lime-100 text-lime-800">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-800">
                 <ServerCog className="h-6 w-6" />
               </div>
               <h3 className="mt-5 text-lg font-bold text-slate-900">
                 {service.title}
               </h3>
               <p className="mt-2 leading-6 text-slate-600">{service.summary}</p>
-              <span className="mt-4 inline-flex items-center justify-center gap-2 text-sm font-semibold text-lime-800">
+              <span className="mt-4 inline-flex items-center justify-center gap-2 text-sm font-semibold text-blue-800">
                 View service{" "}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </span>
@@ -144,10 +144,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </div>
     </section>
-    <section className="bg-[#f4f5f2] py-16 sm:py-20">
+    <section className="bg-[#f8fafc] py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[.16em] text-lime-700">Why choose us</p>
+          <p className="text-sm font-bold uppercase tracking-[.16em] text-blue-700">Why choose us</p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Linux support that keeps things clear and practical.</h2>
           <p className="mt-4 text-slate-600">A thoughtful support partner helps your team make confident decisions about the systems it depends on.</p>
         </div>
@@ -158,8 +158,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             { icon: Wrench, title: "Practical solutions", text: "Recommendations shaped around your environment and needs." },
             { icon: CheckCheck, title: "Careful follow through", text: "Documented next steps help keep work understandable." },
           ].map(({ icon: Icon, title, text }) => (
-            <article key={title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-lime-400 hover:shadow-md">
-              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-lg bg-lime-100 text-lime-800"><Icon className="h-5 w-5" /></div>
+            <article key={title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-400 hover:shadow-md">
+              <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-lg bg-blue-100 text-blue-800"><Icon className="h-5 w-5" /></div>
               <h3 className="mt-4 text-center font-bold text-slate-900">{title}</h3>
               <p className="mt-2 text-center text-sm leading-6 text-slate-600">{text}</p>
             </article>
@@ -167,11 +167,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </div>
     </section>
-    <section className="bg-[#292a2d] py-16 text-white sm:py-20">
+    <section className="bg-[#13243a] py-16 text-white sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[.16em] text-lime-400">
+            <p className="text-sm font-bold uppercase tracking-[.16em] text-blue-300">
               Client feedback
             </p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -186,7 +186,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               key={index}
               className="rounded-xl border border-white/10 bg-white/5 p-6 sm:p-8"
             >
-              <MessageSquareQuote className="h-7 w-7 text-lime-400" />
+              <MessageSquareQuote className="h-7 w-7 text-blue-300" />
               <blockquote className="mt-5 text-lg leading-7 text-slate-200">
                 “{testimonial.quote}”
               </blockquote>
@@ -201,10 +201,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </div>
     </section>
-    <section id="framework" className="bg-[#f4f5f2] py-16">
+    <section id="framework" className="bg-[#f8fafc] py-16">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 text-center sm:px-6 lg:px-8">
         <div className="max-w-4xl">
-          <p className="text-sm font-bold uppercase tracking-[.16em] text-lime-700">
+          <p className="text-sm font-bold uppercase tracking-[.16em] text-blue-700">
             A dependable partner
           </p>
           <h2 className="mt-2 text-2xl font-extrabold text-slate-900 sm:text-3xl">
@@ -217,7 +217,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
         <button
           onClick={onOpenContact}
-          className="shrink-0 rounded-md bg-[#292a2d] px-6 py-3 font-semibold text-white transition hover:bg-lime-700"
+          className="shrink-0 rounded-md bg-[#13243a] px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
         >
           Get in touch <ArrowRight className="ml-2 inline h-4 w-4" />
         </button>

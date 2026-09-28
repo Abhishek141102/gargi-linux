@@ -34,15 +34,15 @@ export const ContactSection: React.FC = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="bg-[#292a2d] text-white"
+        className="bg-[#13243a] text-white"
       >
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8 sm:py-20">
-          <p className="text-sm font-bold uppercase tracking-[.18em] text-lime-400">
+          <p className="text-sm font-bold uppercase tracking-[.18em] text-blue-300">
             Contact Gargi Linux Access
           </p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">
             Let&apos;s talk
-            <span className="block text-lime-400">Linux, together.</span>
+            <span className="block text-blue-300">Linux, together.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-7 text-slate-300">
             Share what you need help with and our team can get the
@@ -68,7 +68,7 @@ export const ContactSection: React.FC = () => {
 
             <div className="mt-8 space-y-6 text-sm text-slate-700">
               <div className="flex gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-lime-50 text-lime-700">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -84,14 +84,14 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-lime-50 text-lime-700">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900">Call Us</h3>
                   <a
                     href="tel:+910000000000"
-                    className="mt-1 inline-block hover:text-lime-700"
+                    className="mt-1 inline-block hover:text-blue-700"
                   >
                     +91 00000 00000
                   </a>
@@ -99,14 +99,14 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-lime-50 text-lime-700">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900">Email Us</h3>
                   <a
                     href="mailto:contact@example.com"
-                    className="mt-1 inline-block hover:text-lime-700"
+                    className="mt-1 inline-block hover:text-blue-700"
                   >
                     contact@example.com
                   </a>
@@ -114,7 +114,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-lime-50 text-lime-700">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
                   <Clock3 className="h-5 w-5" />
                 </div>
                 <div>
@@ -151,7 +151,7 @@ export const ContactSection: React.FC = () => {
             <div className="flex h-full min-h-[595px] flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-7 lg:p-8">
               {submitted ? (
                 <div className="flex min-h-[420px] flex-1 flex-col items-center justify-center text-center">
-                  <CheckCircle2 className="h-14 w-14 text-lime-500" />
+                  <CheckCircle2 className="h-14 w-14 text-blue-600" />
                   <h2 className="mt-5 text-2xl font-bold text-slate-900">
                     Thank You!
                   </h2>
@@ -160,7 +160,7 @@ export const ContactSection: React.FC = () => {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-6 rounded-md bg-lime-400 px-5 py-2.5 text-sm font-bold text-[#242629] transition hover:bg-lime-300"
+                    className="mt-6 rounded-md bg-blue-600 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-blue-700"
                   >
                     Send Another Message
                   </button>
@@ -188,7 +188,7 @@ export const ContactSection: React.FC = () => {
                           name="name"
                           autoComplete="name"
                           placeholder="Enter your name"
-                          className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal outline-none focus:border-lime-600 focus:ring-2 focus:ring-lime-200"
+                          className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
                         />
                       </div>
                       <div>
@@ -201,7 +201,7 @@ export const ContactSection: React.FC = () => {
                           name="email"
                           autoComplete="email"
                           placeholder="Enter your email"
-                          className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal outline-none focus:border-lime-600 focus:ring-2 focus:ring-lime-200"
+                          className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
                         />
                       </div>
                     </div>
@@ -217,7 +217,7 @@ export const ContactSection: React.FC = () => {
                           name="phone"
                           autoComplete="tel"
                           placeholder="Enter your mobile number"
-                          className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal outline-none focus:border-lime-600 focus:ring-2 focus:ring-lime-200"
+                          className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
                         />
                       </div>
                       <div>
@@ -228,7 +228,7 @@ export const ContactSection: React.FC = () => {
                           required
                           name="subject"
                           defaultValue=""
-                          className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal text-slate-700 outline-none focus:border-lime-600 focus:ring-2 focus:ring-lime-200"
+                          className="mt-1.5 w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal text-slate-700 outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
                         >
                           <option value="" disabled>
                             Select a service
@@ -251,13 +251,13 @@ export const ContactSection: React.FC = () => {
                         name="message"
                         rows={6}
                         placeholder="Tell us about your project or requirement..."
-                        className="mt-1.5 w-full min-h-[145px] resize-y rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal outline-none focus:border-lime-600 focus:ring-2 focus:ring-lime-200"
+                        className="mt-1.5 w-full min-h-[145px] resize-y rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm font-normal outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="mx-auto flex items-center justify-center gap-2 rounded-md bg-lime-400 px-8 py-3 text-sm font-bold text-[#242629] transition hover:bg-lime-300"
+                      className="mx-auto flex items-center justify-center gap-2 rounded-md bg-blue-600 px-8 py-3 text-sm font-bold text-white transition hover:bg-blue-700"
                     >
                       Send Message
                       <ArrowRight className="h-4 w-4" />

@@ -42,7 +42,7 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
     <div className="bg-white">
       {/* Hero */}
       <motion.section
-        className="bg-[#0B0F19] text-white py-16 sm:py-20 lg:py-24"
+        className="bg-[#10243a] text-white py-16 sm:py-20 lg:py-24"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
