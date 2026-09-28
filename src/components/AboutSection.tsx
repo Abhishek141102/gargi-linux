@@ -1,5 +1,5 @@
-import React from "react";
-import { ArrowRight, LockKeyhole, Network, ServerCog } from "lucide-react";
+﻿import React from "react";
+import { ArrowRight, Eye, Lightbulb, LockKeyhole, Network, ServerCog, Target } from "lucide-react";
 
 interface AboutSectionProps {
   onOpenContact: () => void;
@@ -18,9 +18,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           Gargi Linux Access Pvt. Ltd.
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-          A Linux-focused technology partner helping organizations manage
-          infrastructure, access, and the systems behind their day-to-day
-          operations.
+          A technology partner helping organizations build software, improve operations, and make the most of connected systems.
         </p>
       </div>
     </div>
@@ -29,18 +27,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
         {[
           {
             icon: ServerCog,
-            title: "Linux infrastructure",
-            text: "Support for the Linux environments your teams and services rely on.",
+            title: "Custom software",
+            text: "Software solutions shaped around the way your teams work.",
           },
           {
             icon: LockKeyhole,
             title: "Controlled access",
-            text: "Thoughtful access practices help protect systems and keep work moving.",
+            text: "Cloud and security practices designed to help protect your digital operations.",
           },
           {
             icon: Network,
             title: "Connected operations",
-            text: "Practical guidance to keep servers, services, and people working together.",
+            text: "Practical integrations help your tools, data, and teams work together.",
           },
         ].map(({ icon: Icon, title, text }) => (
           <article
@@ -53,15 +51,54 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           </article>
         ))}
       </div>
+      <section className="mt-16" aria-labelledby="vision-mission-heading">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-bold uppercase tracking-[.16em] text-blue-700">What guides us</p>
+          <h2 id="vision-mission-heading" className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">Vision &amp; Mission</h2>
+        </div>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <article className="rounded-2xl border border-slate-200 bg-white p-7 text-center shadow-sm sm:p-9">
+            <Eye className="mx-auto h-8 w-8 text-blue-700" aria-hidden="true" />
+            <h3 className="mt-4 text-xl font-bold text-slate-900">Our Vision</h3>
+            <p className="mt-3 leading-7 text-slate-600">To help businesses use thoughtful, dependable technology to make progress and create lasting value.</p>
+          </article>
+          <article className="rounded-2xl border border-slate-200 bg-white p-7 text-center shadow-sm sm:p-9">
+            <Target className="mx-auto h-8 w-8 text-blue-700" aria-hidden="true" />
+            <h3 className="mt-4 text-xl font-bold text-slate-900">Our Mission</h3>
+            <p className="mt-3 leading-7 text-slate-600">To understand each client&apos;s needs and deliver practical software, cloud, security, and AI solutions with care and clear communication.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="mt-16" aria-labelledby="our-process-heading">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-sm font-bold uppercase tracking-[.16em] text-blue-700">How we work</p>
+          <h2 id="our-process-heading" className="mt-3 text-3xl font-extrabold text-slate-900 sm:text-4xl">Our Process</h2>
+          <p className="mt-4 text-slate-600">A clear, collaborative path from your first idea to ongoing improvement.</p>
+        </div>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { icon: Lightbulb, title: "Discover", text: "We learn about your goals, users, workflows, and constraints." },
+            { icon: Target, title: "Plan", text: "We agree on the right scope, priorities, and a practical roadmap." },
+            { icon: ServerCog, title: "Build", text: "We develop and refine the solution with regular feedback." },
+            { icon: Network, title: "Support & improve", text: "We help launch, review results, and plan what comes next." },
+          ].map(({ icon: Icon, title, text }, index) => (
+            <article key={title} className="rounded-xl border border-slate-200 bg-[#f8fafc] p-6 text-center">
+              <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-blue-100 text-sm font-bold text-blue-800">{String(index + 1).padStart(2, "0")}</span>
+              <Icon className="mx-auto mt-4 h-6 w-6 text-blue-700" aria-hidden="true" />
+              <h3 className="mt-3 font-bold text-slate-900">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
       <div className="mt-12 rounded-2xl bg-[#f8fafc] p-8 text-center sm:p-10">
         <h2 className="text-2xl font-extrabold text-slate-900">
-          A straightforward approach to dependable systems
+          A straightforward approach to useful technology
         </h2>
         <p className="mx-auto mt-4 max-w-3xl leading-7 text-slate-600">
-          Every organization has different infrastructure and support needs.
-          Gargi works with you to understand the environment, clarify
-          priorities, and provide practical Linux expertise that fits your
-          operations.
+          Every organization has different workflows, customers, and growth goals.
+          Gargi works with you to understand your needs, clarify priorities, and build software and technology solutions that fit your operations.
         </p>
         <button
           onClick={onOpenContact}
@@ -73,3 +110,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
     </div>
   </section>
 );
+
+
+
+
+

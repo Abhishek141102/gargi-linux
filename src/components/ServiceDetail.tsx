@@ -1,7 +1,7 @@
-import React from "react";
+﻿import React from "react";
 import { ArrowRight, CheckCircle2, ServerCog } from "lucide-react";
 import { motion } from "motion/react";
-import { linuxServiceBySlug } from "../data/linuxServicesData";
+import { companyServiceBySlug } from "../data/servicesData";
 
 interface ServiceDetailProps {
   slug: string;
@@ -12,7 +12,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({
   slug,
   onOpenContact,
 }) => {
-  const service = linuxServiceBySlug(slug);
+  const service = companyServiceBySlug(slug);
 
   if (!service)
     return (
@@ -22,7 +22,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({
             Service Not Found
           </h1>
           <p className="mt-3 text-slate-600">
-            Please choose a service from the Linux Services menu.
+            Please choose a service from the Our Services menu.
           </p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({
       >
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <p className="mb-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[.18em] text-blue-300">
-            <ServerCog className="h-4 w-4" /> Linux Services
+            <ServerCog className="h-4 w-4" /> Our Services
           </p>
           <h1 className="mx-auto max-w-4xl text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
             {service.title}
@@ -55,7 +55,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({
               Service overview
             </p>
             <h2 className="mt-3 text-2xl font-extrabold text-slate-900 sm:text-3xl">
-              Linux support shaped around your environment
+              A solution shaped around your business
             </h2>
             <p className="mt-5 leading-7 text-slate-600">{service.overview}</p>
             
@@ -84,3 +84,5 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({
     </div>
   );
 };
+
+

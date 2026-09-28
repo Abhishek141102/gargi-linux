@@ -1,5 +1,6 @@
-import React, { FormEvent, useState } from "react";
+﻿import React, { FormEvent, useState } from "react";
 import { motion, type Variants } from "motion/react";
+import { COMPANY_SERVICES } from "../data/servicesData";
 import {
   ArrowRight,
   Mail,
@@ -74,11 +75,7 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <h3 className="font-bold text-slate-900">Address</h3>
                   <p className="mt-1 leading-6">
-                    3rd Floor, Kanchwala Avenue, Above Viju&apos;s Dabeli,
-                    <br />
-                    Thatte Nagar Marg, College Road,
-                    <br />
-                    Nashik, Maharashtra 422005
+                    C.S. No. 333/32, Trimbakeshwar, Trimbak,<br />Nashik, Maharashtra, India, 422212
                   </p>
                 </div>
               </div>
@@ -90,10 +87,10 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <h3 className="font-bold text-slate-900">Call Us</h3>
                   <a
-                    href="tel:+910000000000"
+                    href="tel:+919689973967"
                     className="mt-1 inline-block hover:text-blue-700"
                   >
-                    +91 00000 00000
+                    +91 96899 73967
                   </a>
                 </div>
               </div>
@@ -131,8 +128,8 @@ export const ContactSection: React.FC = () => {
             {/* Google Maps Preview */}
             <div className="mt-7 overflow-hidden rounded-xl border border-slate-200 bg-slate-200 shadow-sm">
               <iframe
-                title="Map showing College Road, Nashik"
-                src="https://maps.google.com/maps?q=3rd%20Floor%2C%20Kanchwala%20Avenue%2C%20Thatte%20Nagar%20Marg%2C%20College%20Road%2C%20Nashik%2C%20Maharashtra%20422005&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Map showing C.S. No. 333/32, Trimbakeshwar, Nashik"
+                src="https://maps.google.com/maps?q=C.S.%20No.%20333%2F32%2C%20Trimbakeshwar%2C%20Trimbak%2C%20Nashik%2C%20Maharashtra%2C%20India%2C%20422212&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 className="h-48 w-full border-0 sm:h-56"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -233,11 +230,12 @@ export const ContactSection: React.FC = () => {
                           <option value="" disabled>
                             Select a service
                           </option>
-                          <option>Linux server setup</option>
-                          <option>Linux access management</option>
-                          <option>Security and maintenance</option>
-                          <option>Technical support</option>
-                          <option>Other enquiry</option>
+                          {COMPANY_SERVICES.map((service) => (
+                            <option key={service.slug} value={service.title}>
+                              {service.title}
+                            </option>
+                          ))}
+                          <option value="Other">Other</option>
                         </select>
                       </div>
                     </div>
@@ -272,3 +270,9 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
+
+
+
+
+
+

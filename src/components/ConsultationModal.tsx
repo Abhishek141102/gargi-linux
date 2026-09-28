@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { motion } from "motion/react";
 import { X, CheckCircle2, Send, Calendar } from "lucide-react";
+import { COMPANY_SERVICES } from "../data/servicesData";
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -11,7 +12,7 @@ interface ConsultationModalProps {
 export const ConsultationModal: React.FC<ConsultationModalProps> = ({
   isOpen,
   onClose,
-  defaultGoal = "Linux infrastructure review",
+  defaultGoal = "Custom Software Development",
 }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -55,7 +56,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                 Talk with Gargi
               </h3>
               <p className="text-xs text-slate-300">
-                Tell us about your Linux infrastructure needs
+                Tell us about the technology your business needs
               </p>
             </div>
           </div>
@@ -154,19 +155,17 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                   onChange={(event) => update("goal", event.target.value)}
                   className={`${fieldClass} mt-1.5`}
                 >
-                  <option>Linux infrastructure review</option>
-                  <option>Server setup and configuration</option>
-                  <option>Linux access management</option>
-                  <option>Security and maintenance</option>
-                  <option>Ongoing technical support</option>
-                  <option>Other Linux services</option>
+                  {COMPANY_SERVICES.map((service) => (
+                    <option key={service.slug}>{service.title}</option>
+                  ))}
+                  <option>Other</option>
                 </select>
               </label>
               <label className={labelClass}>
                 Tell us a little more
                 <textarea
                   rows={3}
-                  placeholder="Describe your Linux environment and what support you need..."
+                  placeholder="Tell us about your project, goals, and what you need help with..."
                   value={formData.message}
                   onChange={(event) => update("message", event.target.value)}
                   className={`${fieldClass} mt-1.5 resize-y`}
@@ -186,3 +185,6 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
     </motion.div>
   );
 };
+
+
+

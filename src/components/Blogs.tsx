@@ -1,8 +1,9 @@
-import React from "react";
+﻿import React from "react";
 import { ArrowRight, CalendarDays, Clock3 } from "lucide-react";
 import { motion } from "motion/react";
 import { PageRoute } from "../types";
 import { BLOG_POSTS } from "../data/blogData";
+import { BlogImage } from "./BlogImage";
 
 interface BlogsProps {
   onNavigate: (page: PageRoute) => void;
@@ -32,7 +33,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
             </h1>
 
             <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
-              Read practical guides on Linux systems, server administration, secure access and infrastructure.
+              Explore ideas and practical guidance across the services we provide.
             </p>
           </motion.div>
         </div>
@@ -74,7 +75,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden bg-slate-100">
-                  <img
+                  <BlogImage
                     src={blog.image}
                     alt={blog.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -134,11 +135,11 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl bg-[#13243a] px-6 py-10 sm:px-10 text-center text-white">
             <h2 className="text-2xl sm:text-3xl font-bold">
-              Have a Linux infrastructure question?
+              Have a technology project in mind?
             </h2>
 
             <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
-              Explore practical guidance for maintaining Linux systems and infrastructure.
+              Browse insights on software, ERP, inventory, web and mobile apps, cloud, security, and AI.
             </p>
 
             <button
@@ -154,3 +155,6 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
     </div>
   );
 };
+
+
+

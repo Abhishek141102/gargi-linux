@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -9,6 +9,7 @@ import {
 import { motion } from "motion/react";
 import { PageRoute } from "../types";
 import { BLOG_POSTS } from "../data/blogData";
+import { BlogImage } from "./BlogImage";
 
 interface BlogDetailProps {
   slug: string;
@@ -35,7 +36,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
       {/* Hero / Cover */}
       <section className="relative bg-[#13243a] text-white overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <BlogImage
             src={blog.image}
             alt={blog.title}
             className="w-full h-full object-cover opacity-30"
@@ -108,7 +109,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
           >
             {/* Main Image */}
             <div className="rounded-2xl overflow-hidden mb-10">
-              <img
+              <BlogImage
                 src={blog.image}
                 alt={blog.title}
                 className="w-full aspect-[16/8] object-cover"
@@ -154,8 +155,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
               </h3>
 
               <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                This article is part of the Gargi Linux Access insights
-                series covering Linux systems, server administration and infrastructure.
+                This article is part of the Gargi Linux Access insights series, sharing practical ideas across our technology services.
               </p>
 
               <div className="mt-6 pt-6 border-t border-slate-200 space-y-4">
@@ -194,12 +194,11 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
             {/* Contact CTA */}
             <div className="mt-6 rounded-2xl bg-[#13243a] p-6 text-white">
               <h3 className="text-lg font-bold">
-                Need Linux support?
+                Need help with a project?
               </h3>
 
               <p className="mt-3 text-sm text-slate-300 leading-relaxed">
-                Let's discuss your Linux infrastructure and support
-                needs.
+                Let's discuss your goals and the service that fits your needs.
               </p>
 
               <button
@@ -237,7 +236,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
                   className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer"
                 >
                   <div className="h-48 overflow-hidden">
-                    <img
+                    <BlogImage
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -268,3 +267,6 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ slug, onNavigate, onBlog
     </div>
   );
 };
+
+
+

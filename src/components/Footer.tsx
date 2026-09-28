@@ -1,6 +1,6 @@
-import React from "react";
+﻿import React from "react";
 import { PageRoute } from "../types";
-import { LINUX_SERVICES } from "../data/linuxServicesData";
+import { COMPANY_SERVICES } from "../data/servicesData";
 
 interface FooterProps {
   onNavigate: (page: PageRoute) => void;
@@ -41,48 +41,16 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed">
-              Linux infrastructure, secure access, and technical support for
-              business systems.
+              Custom software, cloud engineering, and security solutions for
+              businesses.
             </p>
-
-            {/* Social Icons */}
-            <div className="flex items-center space-x-3 pt-2">
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="w-8 h-8 rounded-md border border-blue-400/25 bg-blue-400/10 hover:bg-blue-600 text-blue-300 hover:text-white flex items-center justify-center transition-colors text-sm font-bold"
-              >
-                in
-              </a>
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="w-8 h-8 rounded-md border border-blue-400/25 bg-blue-400/10 hover:bg-blue-600 text-blue-300 hover:text-white flex items-center justify-center transition-colors text-sm font-bold"
-              >
-                f
-              </a>
-              <a
-                href="#"
-                aria-label="WhatsApp"
-                className="w-8 h-8 rounded-md border border-blue-400/25 bg-blue-400/10 hover:bg-blue-600 text-blue-300 hover:text-white flex items-center justify-center transition-colors"
-              >
-                <svg
-                  className="w-4 h-4"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                  <path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.821.487 3.53 1.338 5.003L2 22l5.11-1.32A9.958 9.958 0 0012.001 22C17.523 22 22 17.523 22 12S17.523 2 12.001 2zm0 18.163a8.14 8.14 0 01-4.146-1.135l-.297-.176-3.03.783.808-2.955-.193-.303A8.14 8.14 0 013.837 12c0-4.507 3.657-8.163 8.164-8.163S20.163 7.493 20.163 12 16.508 20.163 12.001 20.163z" />
-                </svg>
-              </a>
-            </div>
           </div>
 
-          {/* Column 2: Linux Services */}
+          {/* Column 2: Services */}
           <div className="lg:col-span-3">
-            <h3 className={headingClass}>Linux Services</h3>
+            <h3 className={headingClass}>Services</h3>
             <ul className="space-y-2.5 text-xs text-slate-400">
-              {LINUX_SERVICES.map((service) => (
+              {COMPANY_SERVICES.map((service) => (
                 <li key={service.slug}>
                   <button
                     onClick={() => onServiceNavigate(service.slug)}
@@ -105,14 +73,6 @@ export const Footer: React.FC<FooterProps> = ({
                   className={linkClass}
                 >
                   About Us
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate("opportunities")}
-                  className={linkClass}
-                >
-                  Careers
                 </button>
               </li>
               
@@ -167,18 +127,16 @@ export const Footer: React.FC<FooterProps> = ({
               <div>
                 <p className="text-slate-300 font-semibold mb-1">Address</p>
                 <p className="leading-5">
-                  3rd Floor, Kanchwala Avenue, Above Viju&apos;s Dabeli,
-                  <br />
-                  Thatte Nagar Marg, College Road, Nashik, Maharashtra 422005
+                  C.S. No. 333/32, Trimbakeshwar, Trimbak,<br />Nashik, Maharashtra, India, 422212
                 </p>
               </div>
               <div>
                 <p className="text-slate-300 font-semibold mb-1">Mobile</p>
                 <a
-                  href="tel:+910000000000"
+                  href="tel:+919689973967"
                   className="hover:text-blue-300 transition-colors"
                 >
-                  +91 00000 00000{" "}
+                  +91 96899 73967
                 </a>
               </div>
               <div>
@@ -205,11 +163,18 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Copyright Strip */}
         <div className="mt-8 border-t border-blue-400/20 pt-5 text-xs text-slate-400">
           <p>
-            © {new Date().getFullYear()} Gargi Linux Access Pvt. Ltd. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Gargi Linux Access Pvt. Ltd. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
 };
+
+
+
+
+
+
+
+

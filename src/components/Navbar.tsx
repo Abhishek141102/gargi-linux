@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { Menu, X, ChevronRight, ArrowUpRight, ChevronDown } from "lucide-react";
 import { PageRoute } from "../types";
 import { AnimatePresence, motion } from "motion/react";
-import { LINUX_SERVICES } from "../data/linuxServicesData";
+import { COMPANY_SERVICES } from "../data/servicesData";
 
 interface NavbarProps {
   currentPage: PageRoute;
@@ -31,12 +31,11 @@ export const Navbar: React.FC<NavbarProps> = ({
   const navLinks = [
     { label: "Home", page: "home" as PageRoute },
     {
-      label: "Linux Services",
+      label: "Services",
       page: "home" as PageRoute,
       hash: "#services",
-      dropdown: LINUX_SERVICES.map((service) => service.title),
+      dropdown: COMPANY_SERVICES.map((service) => service.title),
     },
-    { label: "Careers", page: "opportunities" as PageRoute },
     { label: "About", page: "about" as PageRoute },
     { label: "Blog", page: "blogs" as PageRoute },
     { label: "Contact Us", page: "contact" as PageRoute },
@@ -119,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {navLinks.map((item) => {
             const isActive =
               (item.page === currentPage && !item.hash) ||
-              (item.label === "Linux Services" && currentPage === "service-detail");
+              (item.label === "Services" && currentPage === "service-detail");
 
             if ("dropdown" in item && item.dropdown) {
               return (
@@ -182,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                                   );
                                 } else {
                                   onServiceNavigate(
-                                    LINUX_SERVICES.find((service) => service.title === sub)?.slug ?? "",
+                                    COMPANY_SERVICES.find((service) => service.title === sub)?.slug ?? "",
                                   );
                                 }
                                 setMobileMenuOpen(false);
@@ -352,7 +351,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                                     );
                                   } else {
                                     onServiceNavigate(
-                                      LINUX_SERVICES.find((service) => service.title === sub)?.slug ?? "",
+                                      COMPANY_SERVICES.find((service) => service.title === sub)?.slug ?? "",
                                     );
                                   }
                                   setMobileMenuOpen(false);
@@ -416,3 +415,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     </header>
   );
 };
+
+
+
