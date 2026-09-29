@@ -3,6 +3,7 @@ import { Menu, X, ChevronRight, ArrowUpRight, ChevronDown } from "lucide-react";
 import { PageRoute } from "../types";
 import { AnimatePresence, motion } from "motion/react";
 import { COMPANY_SERVICES } from "../data/servicesData";
+import { INDUSTRIES } from "../data/industriesData";
 
 interface NavbarProps {
   currentPage: PageRoute;
@@ -35,6 +36,11 @@ export const Navbar: React.FC<NavbarProps> = ({
       page: "home" as PageRoute,
       hash: "#services",
       dropdown: COMPANY_SERVICES.map((service) => service.title),
+    },
+    {
+      label: "Industries",
+      page: "home" as PageRoute,
+      dropdown: INDUSTRIES.map((industry) => ({ label: industry.navLabel, slug: industry.slug })),
     },
     { label: "About", page: "about" as PageRoute },
     { label: "Blog", page: "blogs" as PageRoute },
@@ -118,7 +124,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           {navLinks.map((item) => {
             const isActive =
               (item.page === currentPage && !item.hash) ||
-              (item.label === "Services" && currentPage === "service-detail");
+              (item.label === "Services" && currentPage === "service-detail") ||
+              (item.label === "Industries" && currentPage === "industry-detail");
 
             if ("dropdown" in item && item.dropdown) {
               return (
@@ -415,6 +422,9 @@ export const Navbar: React.FC<NavbarProps> = ({
     </header>
   );
 };
+
+
+
 
 
 

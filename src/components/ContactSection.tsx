@@ -43,7 +43,7 @@ export const ContactSection: React.FC = () => {
           </p>
           <h1 className="mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">
             Let&apos;s talk
-            <span className="block text-blue-300">Linux, together.</span>
+            <span className="block text-blue-300">Technology, together.</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-7 text-slate-300">
             Share what you need help with and our team can get the
@@ -270,6 +270,7 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
+
 
 
 

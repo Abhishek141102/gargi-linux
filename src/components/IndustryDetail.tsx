@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { motion } from "motion/react";
 import {
   ArrowRight,
@@ -49,7 +49,7 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            className="max-w-4xl"
+            className="mx-auto max-w-4xl text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
@@ -78,7 +78,7 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
             {/* Intro callout */}
             {industry.introTitle && industry.intro && (
               <motion.div
-                className="rounded-2xl bg-slate-50 border-l-4 border-blue-600 p-6 sm:p-8 mb-14"
+                className="rounded-2xl bg-slate-50 border-t-4 border-blue-600 p-6 text-center sm:p-8 mb-14"
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -97,7 +97,7 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
             {industry.cards && industry.cards.length > 0 && (
               <section>
                 {industry.sectionTitle && (
-                  <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
+                  <h2 className="text-center text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
                     {industry.sectionTitle}
                   </h2>
                 )}
@@ -125,8 +125,8 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
                       whileHover={{ y: -5 }}
                       className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
                     >
-                      <div className="flex gap-3 items-start">
-                        <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
+                      <div className="flex flex-col items-center text-center">
+                        <CheckCircle2 className="mx-auto mb-3 h-7 w-7 text-blue-600" />
                         <div>
                           <h3 className="text-lg font-bold text-slate-900">
                             {card.title}
@@ -145,7 +145,7 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
             {/* Challenges we solve */}
             {industry.challenges && industry.challenges.length > 0 && (
               <section className="mt-14">
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
+                <h2 className="text-center text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
                   Common Challenges We Solve
                 </h2>
                 <motion.div
@@ -170,9 +170,9 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
                         },
                       }}
                       whileHover={{ y: -5 }}
-                      className="rounded-xl bg-slate-50 border border-slate-200 p-6"
+                      className="rounded-xl bg-slate-50 border border-slate-200 p-6 text-center"
                     >
-                      <AlertCircle className="w-5 h-5 text-blue-600 mb-3" />
+                      <AlertCircle className="mx-auto mb-3 h-7 w-7 text-blue-600" />
                       <h3 className="font-bold text-slate-900">{item.title}</h3>
                       <p className="mt-2 text-sm text-slate-600 leading-6">
                         {item.description}
@@ -186,14 +186,14 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
             {/* Case studies */}
             {industry.caseStudies && industry.caseStudies.length > 0 && (
               <section className="mt-14">
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
+                <h2 className="text-center text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
                   Systems We Have Delivered in This Sector
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   {industry.caseStudies.map((item) => (
                     <motion.article
                       key={item.title}
-                      className="rounded-xl border border-slate-200 p-6 bg-white shadow-sm"
+                      className="rounded-xl border border-slate-200 p-6 bg-white text-center shadow-sm"
                       initial={{ opacity: 0, y: 25 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.15 }}
@@ -215,7 +215,7 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
             {/* Tech stack */}
             {industry.techStack && industry.techStack.length > 0 && (
               <section className="mt-14">
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
+                <h2 className="text-center text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
                   Technology & Integrations
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -243,7 +243,7 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
+                <h2 className="text-center text-2xl sm:text-3xl font-bold text-slate-900 mb-7">
                   Frequently Asked Questions
                 </h2>
                 <div className="space-y-3">
@@ -297,3 +297,5 @@ export const IndustryDetail: React.FC<IndustryDetailProps> = ({
     </div>
   );
 };
+
+

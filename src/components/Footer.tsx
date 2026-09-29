@@ -1,12 +1,13 @@
 ﻿import React from "react";
 import { PageRoute } from "../types";
 import { COMPANY_SERVICES } from "../data/servicesData";
+import { INDUSTRIES } from "../data/industriesData";
 
 interface FooterProps {
   onNavigate: (page: PageRoute) => void;
   onServiceNavigate: (slug: string) => void;
   onOpenContact: () => void;
-  onIndustryNavigate?: (slug: string) => void;
+  onIndustryNavigate: (slug: string) => void;
 }
 
 const linkClass =
@@ -18,6 +19,7 @@ export const Footer: React.FC<FooterProps> = ({
   onNavigate,
   onServiceNavigate,
   onOpenContact,
+  onIndustryNavigate,
 }) => {
   return (
     <footer
@@ -26,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({
       style={{ backgroundColor: "#10243a" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-x-8">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-[repeat(14,minmax(0,1fr))] lg:gap-x-8">
           {/* Column 1: Logo & Mission Statement */}
           <div className="space-y-3 lg:col-span-2">
             <div
@@ -63,7 +65,20 @@ export const Footer: React.FC<FooterProps> = ({
             </ul>
           </div>
 
-          {/* Column 3: Company */}
+          {/* Column 3: Industries */}
+          <div className="lg:col-span-2">
+            <h3 className={headingClass}>Industries</h3>
+            <ul className="space-y-2.5 text-xs text-slate-400">
+              {INDUSTRIES.map((industry) => (
+                <li key={industry.slug}>
+                  <button onClick={() => onIndustryNavigate(industry.slug)} className={linkClass}>
+                    {industry.navLabel}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Column 4: Company */}
           <div className="lg:col-span-2">
             <h3 className={headingClass}>Company</h3>
             <ul className="space-y-2.5 text-xs text-slate-400">
@@ -84,7 +99,7 @@ export const Footer: React.FC<FooterProps> = ({
             </ul>
           </div>
 
-          {/* Column 4: Resources */}
+          {/* Column 5: Resources */}
           <div className="lg:col-span-2">
             <h3 className={headingClass}>Resources</h3>
             <ul className="space-y-2.5 text-xs text-slate-400">
@@ -120,7 +135,7 @@ export const Footer: React.FC<FooterProps> = ({
             </ul>
           </div>
 
-          {/* Column 5: Office Info */}
+          {/* Column 6: Office Info */}
           <div className="lg:col-span-3">
             <h3 className={headingClass}>Office Info</h3>
             <div className="space-y-3 text-xs text-slate-400">
@@ -170,6 +185,9 @@ export const Footer: React.FC<FooterProps> = ({
     </footer>
   );
 };
+
+
+
 
 
 
