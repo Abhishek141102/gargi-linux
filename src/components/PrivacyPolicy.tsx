@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { motion } from "motion/react";
 import { Shield } from "lucide-react";
 
@@ -81,7 +81,7 @@ export const PrivacyPolicy: React.FC = () => {
                     key={item}
                     className="flex gap-3 text-sm sm:text-base text-slate-600 leading-7"
                   >
-                    <span className="text-blue-700 mt-1">•</span>
+                    <span className="text-blue-700 mt-1">â€¢</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -152,10 +152,10 @@ export const PrivacyPolicy: React.FC = () => {
             <p className="mt-3 text-sm sm:text-base text-slate-600 leading-7">
               If you have questions about this Privacy Policy, contact us at{" "}
               <a
-                href="mailto:contact@example.com"
+                href="mailto:atharvadeshmukh525@gmail.com"
                 className="text-blue-700 hover:text-blue-800 font-medium"
               >
-                contact@example.com
+                atharvadeshmukh525@gmail.com
               </a>
               .
             </p>
@@ -165,3 +165,4 @@ export const PrivacyPolicy: React.FC = () => {
     </div>
   );
 };
+

@@ -153,10 +153,10 @@ export const Footer: React.FC<FooterProps> = ({
               <div>
                 <p className="text-slate-300 font-semibold mb-1">Email</p>
                 <a
-                  href="mailto:contact@example.com"
+                  href="mailto:atharvadeshmukh525@gmail.com"
                   className="hover:text-blue-300 transition-colors break-words"
                 >
-                  contact@example.com{" "}
+                  atharvadeshmukh525@gmail.com{" "}
                 </a>
               </div>
               <div>
@@ -181,6 +181,7 @@ export const Footer: React.FC<FooterProps> = ({
     </footer>
   );
 };
+
 
 
 

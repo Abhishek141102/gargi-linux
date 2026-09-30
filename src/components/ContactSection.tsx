@@ -102,10 +102,10 @@ export const ContactSection: React.FC = () => {
                 <div>
                   <h3 className="font-bold text-slate-900">Email Us</h3>
                   <a
-                    href="mailto:contact@example.com"
+                    href="mailto:atharvadeshmukh525@gmail.com"
                     className="mt-1 inline-block hover:text-blue-700"
                   >
-                    contact@example.com
+                    atharvadeshmukh525@gmail.com
                   </a>
                 </div>
               </div>
@@ -270,6 +270,7 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
+
 
 
 
