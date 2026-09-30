@@ -103,11 +103,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="lg:col-span-2">
             <h3 className={headingClass}>Resources</h3>
             <ul className="space-y-2.5 text-xs text-slate-400">
-              <li>
-                <button onClick={onOpenContact} className={linkClass}>
-                  Technical Support
-                </button>
-              </li>
+              
               <li>
                 <button
                   onClick={() => onNavigate("blogs")}

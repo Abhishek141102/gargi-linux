@@ -123,7 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           {navLinks.map((item) => {
             const isActive =
-              (item.page === currentPage && !item.hash) ||
+              (item.page === currentPage && !item.hash && !("dropdown" in item)) ||
               (item.label === "Services" && currentPage === "service-detail") ||
               (item.label === "Industries" && currentPage === "industry-detail");
 
@@ -422,6 +422,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     </header>
   );
 };
+
 
 
 
