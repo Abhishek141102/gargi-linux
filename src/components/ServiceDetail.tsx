@@ -61,7 +61,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({
             
           </div>
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-left sm:p-8">
-            <h2 className="text-xl font-bold text-slate-900">
+            <h2 className="text-center text-xl font-bold text-slate-900">
               How we can help
             </h2>
             <ul className="mt-6 space-y-4">
@@ -74,7 +74,7 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({
             </ul>
             <button
               onClick={onOpenContact}
-              className="mt-8 inline-flex items-center gap-2 rounded-md bg-blue-600 px-6 py-3 font-bold text-white transition hover:bg-blue-700"
+              className="mx-auto mt-8 flex w-fit items-center justify-center gap-2 rounded-md bg-blue-600 px-6 py-3 font-bold text-white transition hover:bg-blue-700"
             >
               Discuss this service <ArrowRight className="h-4 w-4" />
             </button>
@@ -84,5 +84,6 @@ export const ServiceDetail: React.FC<ServiceDetailProps> = ({
     </div>
   );
 };
+
 
 
