@@ -67,3 +67,4 @@ export const COMPANY_SERVICES: CompanyService[] = [
 
 export const companyServiceBySlug = (slug: string) =>
   COMPANY_SERVICES.find((service) => service.slug === slug);
+

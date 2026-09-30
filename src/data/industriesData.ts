@@ -177,3 +177,4 @@ export const INDUSTRIES: IndustryData[] = [
 
 export const industryBySlug = (slug: string) =>
   INDUSTRIES.find((industry) => industry.slug === slug);
+

@@ -14,9 +14,9 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
   const handleBlogClick = (slug: string) => onBlogNavigate(slug);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-white text-stone-900">
       {/* Hero */}
-      <section className="bg-[#13243a] text-white">
+      <section className="bg-[#2c2028] text-white">
         <div className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8 sm:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
             transition={{ duration: 0.5 }}
             className="mx-auto max-w-3xl text-center"
           >
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-400/10 border border-blue-400/20 text-blue-300 text-sm font-medium">
+            <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-brand-400/10 border border-brand-400/20 text-brand-300 text-sm font-medium">
               Insights & Ideas
             </span>
 
@@ -32,7 +32,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
               Our Blogs
             </h1>
 
-            <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-6 text-lg sm:text-xl text-stone-300 leading-relaxed max-w-2xl mx-auto">
               Explore ideas and practical guidance across the services we provide.
             </p>
           </motion.div>
@@ -44,7 +44,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10 text-center">
             <div>
-              <span className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+              <span className="text-sm font-semibold uppercase tracking-wider text-brand-700">
                 Latest Insights
               </span>
 
@@ -53,7 +53,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
               </h2>
             </div>
 
-            <div className="mt-3 text-sm text-slate-500">
+            <div className="mt-3 text-sm text-stone-500">
               {BLOG_POSTS.length} Articles
             </div>
           </div>
@@ -71,10 +71,10 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
                 }}
                 whileHover={{ y: -5 }}
                 onClick={() => handleBlogClick(blog.slug)}
-                className="group bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all duration-300 cursor-pointer"
+                className="group bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl hover:border-brand-300 transition-all duration-300 cursor-pointer"
               >
                 {/* Image */}
-                <div className="relative h-64 overflow-hidden bg-slate-100">
+                <div className="relative h-64 overflow-hidden bg-stone-100">
                   <BlogImage
                     src={blog.image}
                     alt={blog.title}
@@ -87,7 +87,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
 
                   {/* Category */}
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-xs font-semibold text-slate-800 shadow-sm">
+                    <span className="inline-flex px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-xs font-semibold text-stone-800 shadow-sm">
                       {blog.category}
                     </span>
                   </div>
@@ -96,7 +96,7 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
                 {/* Content */}
                 <div className="p-6 sm:p-7">
                   {/* Meta */}
-                  <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500">
+                  <div className="flex flex-wrap items-center gap-4 text-xs text-stone-500">
                     <span className="inline-flex items-center gap-1.5">
                       <CalendarDays className="w-4 h-4" />
                       {blog.date}
@@ -109,17 +109,17 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-4 text-xl sm:text-2xl font-bold leading-snug text-slate-900 group-hover:text-blue-700 transition-colors">
+                  <h3 className="mt-4 text-xl sm:text-2xl font-bold leading-snug text-stone-900 group-hover:text-brand-700 transition-colors">
                     {blog.title}
                   </h3>
 
                   {/* Excerpt */}
-                  <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                  <p className="mt-3 text-sm sm:text-base text-stone-600 leading-relaxed">
                     {blog.excerpt}
                   </p>
 
                   {/* Read More */}
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-700">
                     Read Article
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -133,18 +133,18 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
       {/* Bottom CTA */}
       <section className="pb-16 lg:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-[#13243a] px-6 py-10 sm:px-10 text-center text-white">
+          <div className="rounded-2xl bg-[#2c2028] px-6 py-10 sm:px-10 text-center text-white">
             <h2 className="text-2xl sm:text-3xl font-bold">
               Have a technology project in mind?
             </h2>
 
-            <p className="mt-3 text-slate-300 max-w-2xl mx-auto">
+            <p className="mt-3 text-stone-300 max-w-2xl mx-auto">
               Browse insights on software, ERP, inventory, web and mobile apps, cloud, security, and AI.
             </p>
 
             <button
               onClick={() => onNavigate("contact")}
-              className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition"
+              className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-semibold transition"
             >
               Talk to Our Team
               <ArrowRight className="w-5 h-5" />
@@ -155,6 +155,8 @@ export const Blogs: React.FC<BlogsProps> = ({ onNavigate, onBlogNavigate }) => {
     </div>
   );
 };
+
+
 
 
 

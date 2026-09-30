@@ -30,3 +30,4 @@ export const BlogImage: React.FC<BlogImageProps> = ({
     }}
   />
 );
+

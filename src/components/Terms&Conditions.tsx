@@ -24,7 +24,7 @@ export const TermsOfUse: React.FC = () => {
     <div className="bg-white">
       {/* Hero */}
       <motion.section
-        className="bg-[#13243a] text-white py-16 sm:py-20 lg:py-24"
+        className="bg-[#2c2028] text-white py-16 sm:py-20 lg:py-24"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
@@ -39,7 +39,7 @@ export const TermsOfUse: React.FC = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
               Terms &amp; Conditions
             </h1>
-            <p className="mt-4 text-sm text-slate-400">
+            <p className="mt-4 text-sm text-stone-400">
               Last updated: September 26, 2026
             </p>
           </motion.div>
@@ -49,7 +49,7 @@ export const TermsOfUse: React.FC = () => {
       <main className="py-12 sm:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.p
-            className="text-base text-slate-700 leading-8"
+            className="text-base text-stone-700 leading-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -67,16 +67,16 @@ export const TermsOfUse: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
             >
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+              <h2 className="text-xl sm:text-2xl font-bold text-stone-900">
                 {section.title}
               </h2>
               <ul className="mt-4 space-y-2">
                 {section.items.map((item) => (
                   <li
                     key={item}
-                    className="flex gap-3 text-sm sm:text-base text-slate-600 leading-7"
+                    className="flex gap-3 text-sm sm:text-base text-stone-600 leading-7"
                   >
-                    <span className="text-blue-700 mt-1">â€¢</span>
+                    <span className="text-brand-700 mt-1">â€¢</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -91,10 +91,10 @@ export const TermsOfUse: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <h2 className="text-xl sm:text-2xl font-bold text-stone-900">
               Intellectual Property
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-7">
+            <p className="mt-3 text-sm sm:text-base text-stone-600 leading-7">
               All content on this website (including text, graphics, logos, and
               design) is owned by Gargi Linux Access or used with permission,
               unless otherwise stated. You may not reproduce or distribute it
@@ -109,10 +109,10 @@ export const TermsOfUse: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <h2 className="text-xl sm:text-2xl font-bold text-stone-900">
               Limitation of Liability
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-7">
+            <p className="mt-3 text-sm sm:text-base text-stone-600 leading-7">
               We provide this website on an &quot;as is&quot; basis. We do not
               guarantee uninterrupted availability or that the website will be
               free of errors. To the maximum extent permitted by law,
@@ -128,10 +128,10 @@ export const TermsOfUse: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <h2 className="text-xl sm:text-2xl font-bold text-stone-900">
               Third-Party Links
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-7">
+            <p className="mt-3 text-sm sm:text-base text-stone-600 leading-7">
               Links to third-party websites are provided for convenience. We do
               not control or endorse third-party content.
             </p>
@@ -144,30 +144,30 @@ export const TermsOfUse: React.FC = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <h2 className="text-xl sm:text-2xl font-bold text-stone-900">
               Changes to Terms
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-7">
+            <p className="mt-3 text-sm sm:text-base text-stone-600 leading-7">
               We may update these Terms occasionally. Any changes will be posted
               on this page.
             </p>
           </motion.section>
 
           <motion.section
-            className="mt-10 rounded-2xl bg-slate-50 border border-slate-200 p-6 sm:p-8"
+            className="mt-10 rounded-2xl bg-stone-50 border border-stone-200 p-6 sm:p-8"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <h2 className="text-xl sm:text-2xl font-bold text-stone-900">
               Contact
             </h2>
-            <p className="mt-3 text-sm sm:text-base text-slate-600 leading-7">
+            <p className="mt-3 text-sm sm:text-base text-stone-600 leading-7">
               For questions about these Terms, contact us at{" "}
               <a
                 href="mailto:atharvadeshmukh525@gmail.com"
-                className="text-blue-700 hover:text-blue-800 font-medium"
+                className="text-brand-700 hover:text-brand-800 font-medium"
               >
                 atharvadeshmukh525@gmail.com
               </a>
@@ -179,4 +179,5 @@ export const TermsOfUse: React.FC = () => {
     </div>
   );
 };
+
 

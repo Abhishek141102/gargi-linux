@@ -11,9 +11,9 @@ interface FooterProps {
 }
 
 const linkClass =
-  "block w-full text-left hover:text-blue-300 transition-colors cursor-pointer";
+  "block w-full text-left hover:text-brand-300 transition-colors cursor-pointer";
 const headingClass =
-  "text-xs font-bold uppercase tracking-wider text-blue-300 mb-3";
+  "text-xs font-bold uppercase tracking-wider text-brand-300 mb-3";
 
 export const Footer: React.FC<FooterProps> = ({
   onNavigate,
@@ -25,7 +25,7 @@ export const Footer: React.FC<FooterProps> = ({
     <footer
       id="global-footer"
       className="text-white border-t border-white/10"
-      style={{ backgroundColor: "#10243a" }}
+      style={{ backgroundColor: "#251d23" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-[repeat(14,minmax(0,1fr))] lg:gap-x-8">
@@ -42,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({
               />
             </div>
 
-            <p className="text-xs text-slate-400 leading-relaxed">
+            <p className="text-xs text-stone-400 leading-relaxed">
               Custom software, cloud engineering, and security solutions for
               businesses.
             </p>
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Column 2: Services */}
           <div className="lg:col-span-3">
             <h3 className={headingClass}>Services</h3>
-            <ul className="space-y-2.5 text-xs text-slate-400">
+            <ul className="space-y-2.5 text-xs text-stone-400">
               {COMPANY_SERVICES.map((service) => (
                 <li key={service.slug}>
                   <button
@@ -68,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Column 3: Industries */}
           <div className="lg:col-span-2">
             <h3 className={headingClass}>Industries</h3>
-            <ul className="space-y-2.5 text-xs text-slate-400">
+            <ul className="space-y-2.5 text-xs text-stone-400">
               {INDUSTRIES.map((industry) => (
                 <li key={industry.slug}>
                   <button onClick={() => onIndustryNavigate(industry.slug)} className={linkClass}>
@@ -81,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Column 4: Company */}
           <div className="lg:col-span-2">
             <h3 className={headingClass}>Company</h3>
-            <ul className="space-y-2.5 text-xs text-slate-400">
+            <ul className="space-y-2.5 text-xs text-stone-400">
               <li>
                 <button
                   onClick={() => onNavigate("about")}
@@ -102,7 +102,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Column 5: Resources */}
           <div className="lg:col-span-2">
             <h3 className={headingClass}>Resources</h3>
-            <ul className="space-y-2.5 text-xs text-slate-400">
+            <ul className="space-y-2.5 text-xs text-stone-400">
               
               <li>
                 <button
@@ -134,33 +134,33 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Column 6: Office Info */}
           <div className="lg:col-span-3">
             <h3 className={headingClass}>Office Info</h3>
-            <div className="space-y-3 text-xs text-slate-400">
+            <div className="space-y-3 text-xs text-stone-400">
               <div>
-                <p className="text-slate-300 font-semibold mb-1">Address</p>
+                <p className="text-stone-300 font-semibold mb-1">Address</p>
                 <p className="leading-5">
                   C.S. No. 333/32, Trimbakeshwar, Trimbak,<br />Nashik, Maharashtra, India, 422212
                 </p>
               </div>
               <div>
-                <p className="text-slate-300 font-semibold mb-1">Mobile</p>
+                <p className="text-stone-300 font-semibold mb-1">Mobile</p>
                 <a
                   href="tel:+919689973967"
-                  className="hover:text-blue-300 transition-colors"
+                  className="hover:text-brand-300 transition-colors"
                 >
                   +91 96899 73967
                 </a>
               </div>
               <div>
-                <p className="text-slate-300 font-semibold mb-1">Email</p>
+                <p className="text-stone-300 font-semibold mb-1">Email</p>
                 <a
                   href="mailto:atharvadeshmukh525@gmail.com"
-                  className="hover:text-blue-300 transition-colors break-words"
+                  className="hover:text-brand-300 transition-colors break-words"
                 >
                   atharvadeshmukh525@gmail.com{" "}
                 </a>
               </div>
               <div>
-                <p className="text-slate-300 font-semibold mb-1">Open Hours</p>
+                <p className="text-stone-300 font-semibold mb-1">Open Hours</p>
                 <p className="leading-5">
                   Mon &ndash; Sat
                   <br />
@@ -172,7 +172,7 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Bottom Copyright Strip */}
-        <div className="mt-8 border-t border-blue-400/20 pt-5 text-xs text-slate-400">
+        <div className="mt-8 border-t border-brand-400/20 pt-5 text-xs text-stone-400">
           <p>
             &copy; {new Date().getFullYear()} Gargi Linux Access Pvt. Ltd. All rights reserved.
           </p>
@@ -181,6 +181,7 @@ export const Footer: React.FC<FooterProps> = ({
     </footer>
   );
 };
+
 
 
 

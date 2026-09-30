@@ -1,25 +1,26 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#13243A"/>
-      <stop offset="1" stop-color="#071321"/>
+      <stop stop-color="#2C2028"/>
+      <stop offset="1" stop-color="#1D171C"/>
     </linearGradient>
     <linearGradient id="line" x1="280" y1="210" x2="950" y2="510" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#60A5FA" stop-opacity=".8"/>
-      <stop offset="1" stop-color="#2563EB" stop-opacity=".08"/>
+      <stop stop-color="#CA8868" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#9C4F35" stop-opacity=".08"/>
     </linearGradient>
     <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
-      <path d="M56 0H0V56" stroke="#93C5FD" stroke-opacity=".08"/>
+      <path d="M56 0H0V56" stroke="#EACBB9" stroke-opacity=".08"/>
     </pattern>
   </defs>
   <path fill="url(#bg)" d="M0 0h1200v700H0z"/>
   <path fill="url(#grid)" d="M0 0h1200v700H0z"/>
-  <circle cx="890" cy="280" r="240" stroke="#60A5FA" stroke-opacity=".12" stroke-width="2"/>
-  <circle cx="890" cy="280" r="170" stroke="#60A5FA" stroke-opacity=".12" stroke-width="2"/>
-  <circle cx="890" cy="280" r="100" stroke="#60A5FA" stroke-opacity=".16" stroke-width="2"/>
+  <circle cx="890" cy="280" r="240" stroke="#CA8868" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="890" cy="280" r="170" stroke="#CA8868" stroke-opacity=".12" stroke-width="2"/>
+  <circle cx="890" cy="280" r="100" stroke="#CA8868" stroke-opacity=".16" stroke-width="2"/>
   <path d="M175 235h310l42 42h140m-492 64h180l36-36h170l38 38h270M255 443h195l40-40h93m-250-160v-62h220l40 40h190" stroke="url(#line)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="175" cy="235" r="8" fill="#60A5FA"/><circle cx="571" cy="277" r="8" fill="#60A5FA"/><circle cx="175" cy="341" r="8" fill="#60A5FA"/><circle cx="724" cy="305" r="8" fill="#60A5FA"/><circle cx="255" cy="443" r="8" fill="#60A5FA"/><circle cx="583" cy="403" r="8" fill="#60A5FA"/>
-  <rect x="792" y="182" width="196" height="196" rx="28" stroke="#60A5FA" stroke-opacity=".22" stroke-width="2" transform="rotate(12 792 182)"/>
-  <path d="M842 245h94M842 280h62M842 315h82" stroke="#BFDBFE" stroke-opacity=".65" stroke-width="8" stroke-linecap="round"/>
-  <text x="82" y="610" fill="#DBEAFE" fill-opacity=".72" font-family="Arial,sans-serif" font-size="22" letter-spacing="6">GARGI LINUX ACCESS · TECHNOLOGY INSIGHTS</text>
+  <circle cx="175" cy="235" r="8" fill="#CA8868"/><circle cx="571" cy="277" r="8" fill="#CA8868"/><circle cx="175" cy="341" r="8" fill="#CA8868"/><circle cx="724" cy="305" r="8" fill="#CA8868"/><circle cx="255" cy="443" r="8" fill="#CA8868"/><circle cx="583" cy="403" r="8" fill="#CA8868"/>
+  <rect x="792" y="182" width="196" height="196" rx="28" stroke="#CA8868" stroke-opacity=".22" stroke-width="2" transform="rotate(12 792 182)"/>
+  <path d="M842 245h94M842 280h62M842 315h82" stroke="#F5E5DC" stroke-opacity=".65" stroke-width="8" stroke-linecap="round"/>
+  <text x="82" y="610" fill="#F5E5DC" fill-opacity=".72" font-family="Arial,sans-serif" font-size="22" letter-spacing="6">GARGI LINUX ACCESS · TECHNOLOGY INSIGHTS</text>
 </svg>
+

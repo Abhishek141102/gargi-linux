@@ -1,4 +1,4 @@
-import {StrictMode} from 'react';
+﻿import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 // @ts-expect-error CSS is handled by the bundler and has no TypeScript module declaration.
@@ -9,3 +9,4 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 );
+

@@ -1,4 +1,4 @@
-export type PageRoute =
+﻿export type PageRoute =
   | "home"
   | "about"
   | "contact"
@@ -9,3 +9,4 @@ export type PageRoute =
   | "blogs"
   | "blog-detail"
   | "opportunities";
+

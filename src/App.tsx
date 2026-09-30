@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+﻿import React, { useState, useEffect, useLayoutEffect } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { PageRoute } from "./types";
 import { Navbar } from "./components/Navbar";
@@ -144,7 +144,7 @@ export default function App() {
   }, [currentPage, selectedServiceSlug, selectedIndustrySlug, selectedBlogSlug]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans selection:bg-blue-200 selection:text-slate-900">
+    <div className="min-h-screen flex flex-col bg-white text-stone-900 font-sans selection:bg-brand-200 selection:text-stone-900">
       {/* Global Navigation Bar */}
       <Navbar
         currentPage={currentPage}
@@ -231,3 +231,4 @@ export default function App() {
     </div>
   );
 }
+
