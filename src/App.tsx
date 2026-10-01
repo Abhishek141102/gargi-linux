@@ -167,6 +167,7 @@ export default function App() {
                   onNavigate={handleNavigate}
                   onOpenContact={() => handleNavigate("contact")}
                   onServiceNavigate={handleServiceNavigate}
+                  onIndustryNavigate={handleIndustryNavigate}
                 />
               </>
             )}
