@@ -199,15 +199,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
 
           {selectedIndustry && (
-            <article key={selectedIndustry.slug} className="relative isolate min-h-[22rem] overflow-hidden rounded-3xl bg-[#2c2028] p-7 text-white shadow-xl shadow-stone-900/10 sm:p-10 lg:min-h-[29rem] lg:p-12">
+            <article key={selectedIndustry.slug} className="relative isolate min-h-[22rem] overflow-hidden rounded-3xl bg-[#2c2028] p-7 text-center text-white shadow-xl shadow-stone-900/10 sm:p-10 lg:min-h-[29rem] lg:p-12">
               <div className="pointer-events-none absolute -right-20 -top-20 -z-10 h-72 w-72 rounded-full border border-brand-300/20" aria-hidden="true" />
               <div className="pointer-events-none absolute -right-8 top-10 -z-10 h-52 w-52 rounded-full border border-brand-300/20" aria-hidden="true" />
-              <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-[.16em] text-brand-300">
+              <div className="flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[.16em] text-brand-300">
                 <span>Industry</span><span className="h-px w-8 bg-brand-400/70" /><span>{String(INDUSTRIES.findIndex((industry) => industry.slug === selectedIndustry.slug) + 1).padStart(2, "0")} / {String(INDUSTRIES.length).padStart(2, "0")}</span>
               </div>
-              <h3 className="mt-12 max-w-lg text-3xl font-extrabold tracking-tight sm:text-4xl lg:mt-16">{selectedIndustry.navLabel}</h3>
-              <p className="mt-5 max-w-xl text-base leading-7 text-stone-300 sm:text-lg sm:leading-8">{selectedIndustry.lead}</p>
-              <button type="button" onClick={() => onIndustryNavigate(selectedIndustry.slug)} className="group mt-8 inline-flex items-center gap-2 rounded-md bg-brand-500 px-5 py-3 font-bold text-white transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#2c2028]">
+              <h3 className="mx-auto mt-12 max-w-lg text-3xl font-extrabold tracking-tight sm:text-4xl lg:mt-16">{selectedIndustry.navLabel}</h3>
+              <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-stone-300 sm:text-lg sm:leading-8">{selectedIndustry.lead}</p>
+              <button type="button" onClick={() => onIndustryNavigate(selectedIndustry.slug)} className="group mx-auto mt-8 inline-flex items-center gap-2 rounded-md bg-brand-500 px-5 py-3 font-bold text-white transition hover:bg-brand-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#2c2028]">
                 Explore {selectedIndustry.navLabel} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
               </button>
               <span className="pointer-events-none absolute bottom-5 right-7 select-none font-serif text-[7rem] font-bold leading-none text-white/[.04] sm:text-[9rem]" aria-hidden="true">{String(INDUSTRIES.findIndex((industry) => industry.slug === selectedIndustry.slug) + 1).padStart(2, "0")}</span>
