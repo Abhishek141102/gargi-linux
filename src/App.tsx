@@ -4,7 +4,6 @@ import { PageRoute } from "./types";
 import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
 import { Footer } from "./components/Footer";
-import { ConsultationModal } from "./components/ConsultationModal";
 import { AboutSection } from "./components/AboutSection";
 import { ContactSection } from "./components/ContactSection";
 import { ServiceDetail } from "./components/ServiceDetail";
@@ -13,7 +12,6 @@ import { PrivacyPolicy } from "./components/PrivacyPolicy";
 import { TermsOfUse } from "./components/Terms&Conditions";
 import { Blogs } from "./components/Blogs";
 import { BlogDetail } from "./components/BlogDetails";
-import { Opportunities } from "./components/Opportunities";
 import { ScrollReveal } from "./components/ScrollReveal";
 
 export default function App() {
@@ -30,7 +28,6 @@ export default function App() {
     if (hash.startsWith("#/blogs/")) return "blog-detail";
     if (hash.startsWith("#/blog-detail")) return "blog-detail";
     if (hash.startsWith("#/blogs")) return "blogs";
-    if (hash.startsWith("#/opportunities")) return "opportunities";
 
     return "home";
   };
@@ -60,7 +57,6 @@ export default function App() {
     string | null
   >(getInitialIndustrySlug());
   const [selectedBlogSlug, setSelectedBlogSlug] = useState<string | null>(getInitialBlogSlug());
-  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const pageTransitionKey = [currentPage, selectedServiceSlug ?? "", selectedIndustrySlug ?? "", selectedBlogSlug ?? ""].join(":");
 
@@ -149,7 +145,7 @@ export default function App() {
       <Navbar
         currentPage={currentPage}
         onNavigate={handleNavigate}
-        onOpenContact={() => setIsConsultationOpen(true)}
+        onOpenContact={() => handleNavigate("contact")}
         onServiceNavigate={handleServiceNavigate}
         onIndustryNavigate={handleIndustryNavigate}
       />
@@ -169,7 +165,7 @@ export default function App() {
               <>
                 <HeroSection
                   onNavigate={handleNavigate}
-                  onOpenContact={() => setIsConsultationOpen(true)}
+                  onOpenContact={() => handleNavigate("contact")}
                   onServiceNavigate={handleServiceNavigate}
                 />
               </>
@@ -179,7 +175,7 @@ export default function App() {
               <ServiceDetail
                 key={selectedServiceSlug}
                 slug={selectedServiceSlug}
-                onOpenContact={() => setIsConsultationOpen(true)}
+                onOpenContact={() => handleNavigate("contact")}
               />
             )}
 
@@ -187,12 +183,12 @@ export default function App() {
               <IndustryDetail
                 key={selectedIndustrySlug}
                 slug={selectedIndustrySlug}
-                onOpenContact={() => setIsConsultationOpen(true)}
+                onOpenContact={() => handleNavigate("contact")}
               />
             )}
 
             {currentPage === "about" && (
-              <AboutSection onOpenContact={() => setIsConsultationOpen(true)} />
+              <AboutSection onOpenContact={() => handleNavigate("contact")} />
             )}
 
             {currentPage === "contact" && <ContactSection />}
@@ -206,10 +202,6 @@ export default function App() {
             {currentPage === "blog-detail" && (
               <BlogDetail slug={selectedBlogSlug ?? ""} onNavigate={handleNavigate} onBlogNavigate={handleBlogNavigate} />
             )}
-
-            {currentPage === "opportunities" && (
-              <Opportunities onNavigate={handleNavigate} />
-            )}
             </ScrollReveal>
           </motion.div>
         </AnimatePresence>
@@ -219,14 +211,8 @@ export default function App() {
       <Footer
         onNavigate={handleNavigate}
         onServiceNavigate={handleServiceNavigate}
-        onOpenContact={() => setIsConsultationOpen(true)}
+        onOpenContact={() => handleNavigate("contact")}
         onIndustryNavigate={handleIndustryNavigate}
-      />
-
-      {/* Interactive Consultation / Let's Talk Modal */}
-      <ConsultationModal
-        isOpen={isConsultationOpen}
-        onClose={() => setIsConsultationOpen(false)}
       />
     </div>
   );

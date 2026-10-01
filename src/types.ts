@@ -7,6 +7,5 @@
   | "privacy-policy"
   | "terms-&-conditions"
   | "blogs"
-  | "blog-detail"
-  | "opportunities";
+  | "blog-detail";
 

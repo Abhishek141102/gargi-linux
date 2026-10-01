@@ -76,7 +76,7 @@ export const TermsOfUse: React.FC = () => {
                     key={item}
                     className="flex gap-3 text-sm sm:text-base text-stone-600 leading-7"
                   >
-                    <span className="text-brand-700 mt-1">â€¢</span>
+                    <span className="text-brand-700 mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
